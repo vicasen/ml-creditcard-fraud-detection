@@ -61,39 +61,6 @@ Técnicas aplicadas:
 
 ## Resultados
 
-### Regresión logística
-TP (Fraude detectado)           :     33  
-TN (Legítima correcta)          : 56,832  
-FP (Falsa alarma)               :     32  
-FN (Fraude no detectado)        :     65  
-
-Accuracy            : 0.9983  
-Precision           : 0.5077  
-Recall              : 0.3367  
-F1 Score            : 0.4049  
-
----
-
-### Naive Bayes
-TP : 75 | TN : 56,256 | FP : 608 | FN : 23  
-
-Accuracy            : 0.9889  
-Precision           : 0.1098  
-Recall              : 0.7653  
-F1 Score            : 0.1921  
-
----
-
-### Random Forest
-TP : 59 | TN : 56,854 | FP : 10 | FN : 39  
-
-Accuracy            : 0.9991  
-Precision           : 0.8551  
-Recall              : 0.6020  
-F1 Score            : 0.7066  
-
----
-
 ### HistGradientBoosting
 TP : 71 | TN : 56,852 | FP : 12 | FN : 27  
 
@@ -102,29 +69,12 @@ Precision           : 0.8554
 Recall              : 0.7245  
 F1 Score            : 0.7845  
 
----
-
-### Isolation Forest
-TP : 13 | TN : 9,521 | FP : 479 | FN : 479  
-
-F1 Score muy bajo → no adecuado para este dataset sin ajuste
-
----
-
-### Local Outlier Factor
-TP : 19 | TN : 9,527 | FP : 473 | FN : 473  
-
-F1 Score muy bajo → no adecuado para este dataset sin ajuste
-
----
-
 ## Conclusiones
 
 - Los modelos supervisados superan claramente a los no supervisados.
-- HistGradientBoostingClassifier obtiene el mejor equilibrio entre precision y recall.
-- Random Forest también presenta resultados sólidos.
 - Los modelos no supervisados no son adecuados para este dataset sin más ajuste.
 - Debido al desbalanceo, accuracy no es una métrica fiable; se prioriza recall.
+- El mejor modelo es HistGradientBoosting debido a su equilibrio entre recall y precision, lo que lo hace más adecuado para detección de fraude donde los falsos negativos son críticos.
 
 ---
 
@@ -159,7 +109,7 @@ Abrir el archivo `ml_fraud_detection_creditcard.ipynb` en el navegador.
 
 ## Autor
 
-Nombre: **[Víctor Asenjo Pascual]**
+Nombre: Víctor Asenjo Pascual
 GitHub: https://github.com/vicasen
 
 ---
